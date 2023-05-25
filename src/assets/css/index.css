@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	@apply bg-transparent w-1;
+}
+
+body::-webkit-scrollbar-corner {
+	@apply bg-transparent;
+}
+
+body::-webkit-scrollbar-track {
+	@apply bg-black/10;
+}
+
+body::-webkit-scrollbar-track-piece {
+	@apply bg-transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	@apply bg-black/30 hover:bg-black/40 rounded-full transition-all duration-500;
+}
+
+html {
+	scrollbar-color: rgb(0, 0, 0, 0.4) rgb(0, 0, 0, 0);
+	scrollbar-width: thin;
+}
+
+@font-face {
+	font-family: GilmerBold;
+	src: url("./fonts/gilmer/GilmerBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: GilmerHeavy;
+	src: url("./fonts/gilmer/GilmerHeavy.otf") format("opentype");
+}
+
+@font-face {
+	font-family: GilmerLight;
+	src: url("./fonts/gilmer/GilmerLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: GilmerMedium;
+	src: url("./fonts/gilmer/GilmerMedium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: GilmerOutline;
+	src: url("./fonts/gilmer/GilmerOutline.otf") format("opentype");
+}
+
+@font-face {
+	font-family: GilmerRegular;
+	src: url("./fonts/gilmer/GilmerRegular.otf") format("opentype");
+}
+
+.hamburger_container > * {
+	transform: 0;
+	transition: 0.3s all linear;
+}
+.nav_open .ham1 {
+	transform: rotate(45deg) translateX(0.1rem);
+}
+.nav_open .ham2 {
+	@apply hidden;
+}
+
+.nav_open .ham3 {
+	transform: rotate(-45deg) translateX(0.099rem);
+}
+
+.footer-line {
+	opacity: 0.1;
+	border: 2px solid #ffffff;
+}
+
+.pills, .partners {
+	scrollbar-color: rgb(0, 0, 0, 0) rgb(0, 0, 0, 0);
+	scrollbar-width: thin;
+}
+
+.pills::-webkit-scrollbar {
+	@apply bg-transparent w-0;
+	@apply invisible;
+}
+
+.pills::-webkit-scrollbar-corner {
+	@apply bg-transparent;
+	@apply invisible;
+}
+
+.pills::-webkit-scrollbar-track {
+	@apply bg-red-500 w-0;
+	@apply invisible;
+}
+
+.pills::-webkit-scrollbar-track-piece {
+	@apply bg-transparent w-0;
+	@apply invisible;
+}
+
+.pills::-webkit-scrollbar-thumb {
+	@apply bg-black/30 hover:bg-black/40 rounded-full transition-all duration-500 w-0;
+	@apply invisible;
+}
+
+.swiper-pagination{
+	all: unset !important;
+	display: hidden !important;
+}
+
+.swiper-button-prev{
+	all: unset !important;
+	display: hidden !important;
+}
+
+.swiper-button-next{
+	all: unset !important;
+	display: hidden !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after, .swiper-pagination-fraction > *, .swiper-pagination-fraction {
+	all: unset !important;
+	display: none !important;
+}
+
+.slide{
+	display: flex !important;
+}
+
+
+.button-shadow{
+	box-shadow: 2px 2px 4px rgba(41, 45, 50, 0.15);
+}
